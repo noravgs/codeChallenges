@@ -8,7 +8,8 @@
 // domainName("http://github.com/carbonfive/raygun") == "github" 
 // domainName("http://www.zombie-bites.com") == "zombie-bites"
 // domainName("https://www.cnet.com") == "cnet
-
+//replace parts of url u don't want 'http://', 'https://', 'www.'
+//split '.'
 function replaceDomain(str) {
  let result = str.replace("http://",'').replace("https://",'').replace("www.", '').split('.')
  return result[0]
